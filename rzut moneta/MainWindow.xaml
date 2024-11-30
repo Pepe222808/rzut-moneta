@@ -1,0 +1,70 @@
+﻿<Window x:Class="rzut_moneta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rzut_moneta"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Name="lblWynik" Grid.Column="1" Content="Wynik: 100" HorizontalAlignment="Left" Margin="101,233,0,0" VerticalAlignment="Top" Width="120" FontSize="20"/>
+
+        <Label Name="Ustawienia" Content="Ustawienia:" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox Name="cmbDlugosc_gry" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="120" FontSize="20" SelectionChanged="cmbDlugosc_gry_SelectionChanged">
+            <ComboBoxItem Content="5 rzutów" IsSelected="True"/>
+            <ComboBoxItem Content="10 rzutów"/>
+        </ComboBox>
+
+        <Label Content="Początkowa liczba pkt:" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox Name="inputpkt_start" HorizontalAlignment="Center" Height="32" Margin="0,171,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="114" FontSize="20" TextChanged="inputpkt_start_TextChanged" PreviewTextInput="walidacja" PreviewKeyDown="txtNumber_PreviewKeyDown"/>
+
+        <Label Name="Wspolczynniki" Content="Współczynniki:" HorizontalAlignment="Left" Margin="70,215,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="zysku" HorizontalAlignment="Left" Margin="70,275,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="straty" HorizontalAlignment="Left" Margin="70,336,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <CheckBox Name="cbRowne_w" Content="Równe współczynniki" HorizontalAlignment="Left" Margin="70,255,0,0" VerticalAlignment="Top" Checked="cbRowne_w_Checked" Unchecked="cbRowne_w_Unchecked"/>
+
+        <TextBox Name="inputW_zysku" HorizontalAlignment="Center" Height="32" Margin="0,304,0,0" TextWrapping="Wrap" Text="2,0" VerticalAlignment="Top" Width="118" FontSize="20" TextChanged="inputW_zysku_TextChanged" PreviewTextInput="walidacja" PreviewKeyDown="txtNumber_PreviewKeyDown"/>
+        <TextBox Name="inputW_straty" HorizontalAlignment="Center" Height="32" Margin="0,365,0,0" TextWrapping="Wrap" Text="0,5" VerticalAlignment="Top" Width="118" FontSize="20" TextChanged="inputW_straty_TextChanged" PreviewTextInput="walidacja" PreviewKeyDown="txtNumber_PreviewKeyDown"/>
+
+
+        <Image Name="imgMoneta" Grid.Column="1" HorizontalAlignment="Left" Height="142" Margin="62,44,0,0" VerticalAlignment="Top" Width="147" Source="/moneta.png" />
+
+        <Button Name="btnRzut" Grid.Column="1" Content="Rzuć" HorizontalAlignment="Center" Margin="0,320,0,0" VerticalAlignment="Top" FontSize="20" Width="65" Click="btnRzut_Click"/>
+
+
+        <Label Grid.Column="2" Content="Tabele wyników" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ListView Name="lvTabela_5" Grid.Column="2" HorizontalAlignment="Center" Height="142" Margin="0,85,0,0" VerticalAlignment="Top" Width="176">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn>
+                        <GridViewColumnHeader Content="Gra na 5 rzutów"/>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="lvTabela_10" Grid.Column="2" HorizontalAlignment="Center" Height="142" Margin="0,236,0,0" VerticalAlignment="Top" Width="176" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn>
+                        <GridViewColumnHeader Content="Gra na 10 rzutów"/>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Długość gry:" HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Name="lbltest" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Height="32" Margin="51,365,0,0" VerticalAlignment="Top" Width="101"/>
+        <RadioButton Name="rbOrzel" Grid.Column="1" Content="orzel" HorizontalAlignment="Left" Margin="62,292,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton Name="rbReszka" Grid.Column="1" Content="reszka" HorizontalAlignment="Left" Margin="150,292,0,0" VerticalAlignment="Top"/>
+
+
+
+
+
+    </Grid>
+</Window>

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.ObjectModel;
+using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -10,26 +11,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace rzut_moneta
 {
     public partial class MainWindow : Window
     {
-
+        protected ImageAnimationController controler;
         public MainWindow()
         {
             InitializeComponent();
         }
-
 
         double wynik_p = 100, wynik = 100;
         double zysk = 2.0;
         double strata = 0.5;
         int runda = 0;
         int dlugosc = 5; 
-        List <string> wyniki_5 = new List<string>();
-        List<string> wyniki_10 = new List<string>();
+        List <WynikData> wyniki_5 = new List<WynikData>();
+        List<WynikData> wyniki_10 = new List<WynikData>();
 
 
         private void cmbDlugosc_gry_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -54,7 +55,7 @@ namespace rzut_moneta
                 zysk = double.Parse(inputW_zysku.Text);
                 if (cbRowne_w.IsChecked == true)
                 {
-                    strata = Math.Round(1 / zysk, 2);
+                    strata = Math.Round(1 / zysk, zysk.ToString().Length);
                     inputW_straty.Text = strata.ToString();
                 }
                 restart();
@@ -82,11 +83,21 @@ namespace rzut_moneta
 
         private void btnRzut_Click(object sender, RoutedEventArgs e)
         {
+            btnRzut.IsEnabled = false;
+
+            if(controler.IsPaused)
+            {
+                controler.GotoFrame(0);
+                controler.Play();
+            }
+
             if (runda < dlugosc)
             {
                 int rzut = losuj();
                 int strona = obstawianie();
 
+                string path = (rzut == 0) ? "Heads" : "Tails";
+                imgMoneta.Source = new BitmapImage(new Uri("pack://application:,,,/" + path + ".png"));
 
                 if (rzut == strona)
                 {
@@ -101,16 +112,31 @@ namespace rzut_moneta
             }
             else if (runda == dlugosc)
             {
+                double roznica = wynik_p - wynik;
+                if (roznica > 0)
+                {
+                    MessageBox.Show("Straciłeś: " + roznica + " monet");
+                }
+                else if( roznica < 0)
+                {
+                    MessageBox.Show("Wygrałeś: " + -roznica + " monet");
+                }
+                else
+                {
+                    MessageBox.Show("Nic nie straciłeś");
+
+                }
+
                 if (dlugosc == 5)
                 {
                     lvTabela_5.ItemsSource = null;
-                    wyniki_5.Add(wynik.ToString());
+                    wyniki_5.Insert(0, new WynikData { Wynik = wynik.ToString(), Czas = DateTime.Now.ToString("HH:mm:ss") });
                     lvTabela_5.ItemsSource = wyniki_5;
                 }
                 else if (dlugosc == 10)
                 {
                     lvTabela_10.ItemsSource = null;
-                    wyniki_10.Add(wynik.ToString());
+                    wyniki_10.Insert(0, new WynikData { Wynik = wynik.ToString(), Czas = DateTime.Now.ToString("HH:mm:ss") } );
                     lvTabela_10.ItemsSource = wyniki_10;
                 }
                 restart();
@@ -158,6 +184,17 @@ namespace rzut_moneta
             {
                 e.Handled = true;
             }
+        }
+
+        private void AnimationLoaded(object sender, EventArgs e)
+        {
+            this.controler = ImageBehavior.GetAnimationController(gifImage);
+        }
+
+        private void AnimationCompleted(object sender, EventArgs e)
+        {
+            btnRzut.IsEnabled = true;
+            controler.Pause();
         }
     }
 }

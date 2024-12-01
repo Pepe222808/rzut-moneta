@@ -18,3 +18,27 @@ C:\Users\Pepo\source\repos\rzut moneta\rzut moneta\obj\Debug\net8.0-windows\refi
 C:\Users\Pepo\source\repos\rzut moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.pdb
 C:\Users\Pepo\source\repos\rzut moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.genruntimeconfig.cache
 C:\Users\Pepo\source\repos\rzut moneta\rzut moneta\obj\Debug\net8.0-windows\ref\rzut moneta.dll
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\bin\Debug\net8.0-windows\rzut moneta.exe
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\bin\Debug\net8.0-windows\rzut moneta.deps.json
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\bin\Debug\net8.0-windows\rzut moneta.runtimeconfig.json
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\bin\Debug\net8.0-windows\rzut moneta.dll
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\bin\Debug\net8.0-windows\rzut moneta.pdb
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta_MarkupCompile.cache
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta_MarkupCompile.lref
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.g.resources
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.AssemblyInfoInputs.cache
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.AssemblyInfo.cs
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.csproj.CoreCompileInputs.cache
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.sourcelink.json
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.dll
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\refint\rzut moneta.dll
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.pdb
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.genruntimeconfig.cache
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\ref\rzut moneta.dll
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\bin\Debug\net8.0-windows\WpfAnimatedGif.dll
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut moneta.csproj.AssemblyReference.cache
+C:\Users\bazia\source\repos\rzut-moneta\rzut-moneta\rzut moneta\obj\Debug\net8.0-windows\rzut mon.AB38165D.Up2Date

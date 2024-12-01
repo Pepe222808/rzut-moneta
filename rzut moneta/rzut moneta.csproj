@@ -10,15 +10,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Heads.png" />
     <None Remove="img\moneta.png" />
     <None Remove="moneta.png" />
+    <None Remove="Tails.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="explosion.gif" />
+    <Resource Include="Heads.png" />
     <Resource Include="img\moneta.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="moneta.png" />
+    <Resource Include="Tails.png" />
   </ItemGroup>
 
 </Project>

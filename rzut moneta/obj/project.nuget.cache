@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+GgSt78KGRU=",
+  "dgSpecHash": "ZgaHLxh/m4w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pepo\\source\\repos\\rzut moneta\\rzut moneta\\rzut moneta.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\bazia\\source\\repos\\rzut-moneta\\rzut-moneta\\rzut moneta\\rzut moneta.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bazia\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
